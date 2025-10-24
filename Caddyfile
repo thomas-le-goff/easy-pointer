@@ -1,0 +1,14 @@
+localhost:8080 {
+	encode zstd gzip
+
+	@api path /api/*
+
+	handle_path /api/* {
+		uri strip_prefix /api
+		reverse_proxy localhost:8000
+	}
+
+	handle {
+		reverse_proxy localhost:8082
+	}
+}

@@ -1,0 +1,21 @@
+@baseUrl = https://localhost:8080/api
+
+###
+PUT {{baseUrl}}/editor/code
+Content-Type: application/json
+
+{
+    "code":"#include \"wasm4.h\"\n\nconst uint8_t smiley[] = {\n    0b11000011,\n    0b10000001,\n    0b00100100,\n    0b00100100,\n    0b00000000,\n    0b00100100,\n    0b10011001,\n    0b11000011,\n};\n\nvoid update () {\n    *DRAW_COLORS = 2;\n    text(\"Hello from C!\", 10, 10);\n\n    uint8_t gamepad = *GAMEPAD1;\n    if (gamepad & BUTTON_1) {\n        *DRAW_COLORS = 4;\n    }\n\n    blit(smiley, 76, 76, 8, 8, BLIT_1BPP);\n    text(\"Press X to blink\", 16, 90);\n}\n"
+}
+
+###
+GET {{baseUrl}}/editor/code
+Content-Type: application/json
+
+###
+GET {{baseUrl}}/editor/game
+
+###
+GET {{baseUrl}}/user/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZDgwOTgwMy0wZDhmLTQ2NjctODcwNy0xNDllNTE3ZmE2YmQiLCJleHAiOjE3NjA5ODgxNzF9.EdULuAwwZJUcMa5Hx5XaDm4MnkvdvuGIN3GP8G3BV34
