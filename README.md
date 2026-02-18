@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="preview.gif" />
+</p>
+
 # Easy Pointer (WIP)
 
 A web-based platform designed to help beginners (IT students) understand and practice **pointers in C** through interactive exercises and in-browser execution.
