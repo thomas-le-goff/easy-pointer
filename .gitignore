@@ -1,16 +1,33 @@
+# ============================================
 # Environment Variables
+# ============================================
 .env
-.env.local
+.env.*
+*.env
 
+# ============================================
+# Virtual Environments
+# ============================================
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ============================================
 # Python
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Distribution / packaging
 build/
-develop-eggs/
 dist/
+develop-eggs/
 downloads/
 eggs/
 .eggs/
@@ -20,37 +37,97 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# ============================================
+# Dependency Managers
+# ============================================
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# PDM
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# ============================================
+# Testing / Coverage
+# ============================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ============================================
+# Type Checkers / Linters
+# ============================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ============================================
+# Jupyter
+# ============================================
+.ipynb_checkpoints
+
+# ============================================
 # IDE
+# ============================================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+# ============================================
 # Database
+# ============================================
 *.db
 *.sqlite3
 *.sqlite
 
+# ============================================
 # Logs
+# ============================================
 *.log
 logs/
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-
+# ============================================
 # OS
+# ============================================
 .DS_Store
 Thumbs.db
 
-# FastAPI specific
-*.pid
-instance/
-.webassets-cache
+# ============================================
+# Misc
+# ============================================
+*.bak
+*.tmp
+*.temp

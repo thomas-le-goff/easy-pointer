@@ -24,7 +24,7 @@ const codeChangeTimeout = 1000;
 export const EditorPage = () => {
   const client = useApiClient();
   const [code, setCode] = useState();
-  const [markdown, setMarkdown] = useState("# Hi, *Pluto*!");
+  const [markdown, setMarkdown] = useState("");
   const [errors, setErrors] = useState([]);
   const gameIframeRef = useRef();
   const debounceTimerRef = useRef();
@@ -112,7 +112,6 @@ export const EditorPage = () => {
                 border: 0,
               }}
               allow="fullscreen; gamepad; autoplay"
-              frameborder="0"
               ref={gameIframeRef}
               id="game"
               src={`/api/editor/game`}
